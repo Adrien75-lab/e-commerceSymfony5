@@ -94,7 +94,8 @@
             "@auto-scripts"
         ],
         "compile": [
-            "php/bin console doctrine:schema:update --force"
+            "@symfony install",
+            "symfony console doctrine:migrations:migrate "
         ]
     },
 
