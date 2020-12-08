@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Classe\Cart;
+use App\Classe\Mail;
 use App\Entity\Order;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Controller\OrderSuccessController;
@@ -27,10 +28,20 @@ class OrderSuccessController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
-        if (!$order->getIsPaid()){
+        if ($order->getState(1) === 0){
+            // Vider la session "cart"
+
             $cart->remove();
-            $order->setIsPaid(1);
+
+            // Modifer le statut isPaid de notre commande en mettant 1
+            
+            $order->setState(1);
             $this->entityManager->flush();
+
+            // Envoyer un mail à notre client pour lui confirmer sa commande
+            $mail = new Mail();
+            $content = "Bonjour".$order->getUser()->getFirstname()."<br/>Merci pour votre commande";
+            $mail ->send($order->getUser(), $order->getUser()->getFirstname(),'Votre commande sur la boutique française est confirmée.', $content);
         }
         
         return $this->render('order_success/index.html.twig',[

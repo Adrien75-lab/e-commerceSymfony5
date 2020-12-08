@@ -3,7 +3,7 @@
 {% block title %}{{ product.name }} - La boutique Française{% endblock %}
 
 {% block content %}
-<div class="row">
+    <div class="row">
 
     <div class="col-md-5">
     <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}"class="img-fluid">
@@ -17,12 +17,26 @@
         {{ product.description }}
 
         </p>
-        <a href="{{ path('add_to_cart', {'id': product.id}) }}" class="btn btn-primary">Ajouter dans votre panier</a>
-        <hr>
+        <a href="{{ path('add_to_cart', {'id': product.id}) }}" class="btn btn-primary">Ajouter au panier</a>
+        <br>
+        
 
 
     </div>
+    
 </div>
+<hr>
+<h3>Nos meilleurs ventes</h3>
+        
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-3">
+            {% include 'product/single_product.html.twig' %}
+            </div>
+                
+            {% endfor %}
+        </div><!-- /.row -->
+
 
 
 {% endblock %}
