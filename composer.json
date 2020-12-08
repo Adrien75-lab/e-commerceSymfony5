@@ -60,6 +60,7 @@
         },
         "sort-packages": true
     },
+    
     "autoload": {
         "psr-4": {
             "App\\": "src/"
