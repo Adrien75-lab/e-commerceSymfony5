@@ -94,7 +94,7 @@
             "@auto-scripts"
         ],
         "compile": [
-            "php bin/console doctrine:make:migrate --dry-run"
+            "php bin/console doctrine:migrations:migrate --dry-run"
           
         ]
     },
