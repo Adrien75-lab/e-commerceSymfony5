@@ -94,8 +94,7 @@
             "@auto-scripts"
         ],
         "compile": [
-            "@symfony install",
-            "symfony console doctrine:migrations:migrate "
+            " php bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration"
         ]
     },
 
