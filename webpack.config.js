@@ -10,7 +10,7 @@ Encore
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
-    .setPublicPath('/build/')
+    .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
@@ -20,20 +20,10 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addStyleEntry('css/boutiquefrancaise','./assets/css/boutiquefrancaise.css')
-    .addEntry('img/shopping-cart','./assets/img/shopping-cart.png')
-    .addEntry('img/first','./assets/img/first.jpg')
-    .addEntry('img/second','./assets/img/second.jpg')
-    //.addEntry('js/boutiquefrancaise','./assets/js/bootstrap.bundle.js')
-   
-    //.addStyleEntry('css/bootstrap','./assets/css/bootstrap.min.css')
-
-    
-    
+    .addEntry('app', './assets/app.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
-    .addEntry('js/boutiquefrancaise','./assets/js/bootstrap.bundle.js')
-    //.enableStimulusBridge('./assets/controllers.json')
+    .enableStimulusBridge('./assets/controllers.json')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -79,8 +69,7 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    .autoProvidejQuery()
-    
+    //.autoProvidejQuery()
 ;
 
 module.exports = Encore.getWebpackConfig();
