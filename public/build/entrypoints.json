@@ -1,0 +1,37 @@
+{
+  "entrypoints": {
+    "img/shopping-cart": {
+      "js": [
+        "/build/runtime.js",
+        "/build/img/shopping-cart.js"
+      ]
+    },
+    "img/first": {
+      "js": [
+        "/build/runtime.js",
+        "/build/img/first.js"
+      ]
+    },
+    "img/second": {
+      "js": [
+        "/build/runtime.js",
+        "/build/img/second.js"
+      ]
+    },
+    "js/boutiquefrancaise": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~js/boutiquefrancaise.js",
+        "/build/js/boutiquefrancaise.js"
+      ]
+    },
+    "css/boutiquefrancaise": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/css/boutiquefrancaise.css"
+      ]
+    }
+  }
+}
