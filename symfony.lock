@@ -90,9 +90,6 @@
     "egulias/email-validator": {
         "version": "2.1.24"
     },
-    "fzaninotto/faker": {
-        "version": "v1.9.1"
-    },
     "guzzlehttp/guzzle": {
         "version": "7.2.0"
     },
@@ -361,6 +358,9 @@
     },
     "symfony/options-resolver": {
         "version": "v5.1.9"
+    },
+    "symfony/orm-pack": {
+        "version": "v2.0.0"
     },
     "symfony/phpunit-bridge": {
         "version": "4.3",
