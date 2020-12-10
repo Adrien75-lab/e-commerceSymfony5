@@ -18,12 +18,14 @@ class AppFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
+        $faker = Factory::create('fr_FR');
         $adminUser = new User();
         $adminUser->setFirstName('Adrien')
             ->setLastName('Christophe')
             ->setEmail('adrichristophe@gmail.com')
             ->setPassword('M0tdep@sse')
-            ->setHash($this->encoder->encodePassword($adminUser, 'password'));
+            ->setHash($this->encoder->encodePassword($adminUser, 'password'))
+            ->setRole('ROLE_ADMIN');
         $manager->persist($adminUser);
         $manager->flush();
     }
