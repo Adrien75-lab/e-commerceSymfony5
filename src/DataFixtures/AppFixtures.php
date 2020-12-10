@@ -19,7 +19,7 @@ class AppFixtures extends Fixture
             ->setLastName('Christophe')
             ->setEmail('adrichristophe@gmail.com')
             ->setPassword('M0tdep@sse')
-            >addUserRole($adminRole);
+            ->setRole('ROLE_ADMIN');
         $manager->persist($adminUser);
         
     }
