@@ -18,7 +18,6 @@ class AppFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        $manager->persist($adminRole);
         $adminUser = new User();
         $adminUser->setFirstName('Adrien')
             ->setLastName('Christophe')
