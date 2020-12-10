@@ -13,7 +13,7 @@ class AppFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        
+        $faker = Factory::create('fr_FR');
         $adminUser = new User();
         $adminUser->setFirstName('Adrien')
             ->setLastName('Christophe')
