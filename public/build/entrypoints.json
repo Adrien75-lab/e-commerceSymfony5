@@ -1,11 +1,11 @@
 {
   "entrypoints": {
-    "css/boutiquefrancaise": {
+    "css/app": {
       "js": [
         "/build/runtime.js"
       ],
       "css": [
-        "/build/css/boutiquefrancaise.css"
+        "/build/css/app.css"
       ]
     }
   }
