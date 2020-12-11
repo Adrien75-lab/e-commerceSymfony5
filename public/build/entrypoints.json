@@ -1,13 +1,30 @@
 {
   "entrypoints": {
-    "app": {
+    "css/app": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app.js",
-        "/build/app.js"
+        "/build/css/app~css/bootstrap.js"
       ],
       "css": [
-        "/build/app.css"
+        "/build/css/app~css/bootstrap.css",
+        "/build/css/app.css"
+      ]
+    },
+    "css/bootstrap": {
+      "js": [
+        "/build/runtime.js",
+        "/build/css/app~css/bootstrap.js"
+      ],
+      "css": [
+        "/build/css/app~css/bootstrap.css"
+      ]
+    },
+    "css/carousel": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/css/carousel.css"
       ]
     }
   }
