@@ -1,30 +1,11 @@
 {
   "entrypoints": {
-    "css/app": {
-      "js": [
-        "/build/runtime.js",
-        "/build/css/app~css/bootstrap.js"
-      ],
-      "css": [
-        "/build/css/app~css/bootstrap.css",
-        "/build/css/app.css"
-      ]
-    },
-    "css/bootstrap": {
-      "js": [
-        "/build/runtime.js",
-        "/build/css/app~css/bootstrap.js"
-      ],
-      "css": [
-        "/build/css/app~css/bootstrap.css"
-      ]
-    },
-    "css/carousel": {
+    "css/boutiquefrancaise": {
       "js": [
         "/build/runtime.js"
       ],
       "css": [
-        "/build/css/carousel.css"
+        "/build/css/boutiquefrancaise.css"
       ]
     }
   }
