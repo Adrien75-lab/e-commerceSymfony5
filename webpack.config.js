@@ -8,11 +8,13 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 Encore
     // directory where compiled assets will be stored
-    .setOutputPath('/build/')
+    .setOutputPath('public/build/')
     // public path used by the web server to access the output path
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     .setManifestKeyPrefix('build/')
+
+
 
     /*
      * ENTRY CONFIG
@@ -22,7 +24,6 @@ Encore
      */
     
     .addStyleEntry('css/boutiquefrancaise', './assets/css/boutiquefrancaise.css')
-    //.addStyleEntry('css', './assets/css/bootstrap.min.css')
     //.addStyleEntry('css', './assets/css/carousel.css')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
