@@ -25,6 +25,10 @@ class HomeController extends AbstractController
     {
         $products = $this->entityManager->getRepository(Product::class)->findByIsBest(1);
         $headers = $this->entityManager->getRepository(Header::class)->findAll();
+        $this->entityManager->persist($products);
+        $this->entityManager->persist($headers);
+            $this->entityManager->flush();
+        
         
 
         
