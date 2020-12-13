@@ -26,7 +26,7 @@ class HeaderCrudController extends AbstractCrudController
             TextField::new('btnUrl','Url de destination de notre bouton'),
             ImageField::new('illustration')
             ->setBasePath('uploads')
-            ->setUploadDir('./public/uploads')
+            ->setUploadDir('uploads/')
 
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setRequired(false),
