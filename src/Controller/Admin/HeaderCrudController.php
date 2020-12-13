@@ -29,7 +29,7 @@ class HeaderCrudController extends AbstractCrudController
         return [
             TextField::new('title','Titre du header'),
             TextareaField::new('content',' contenu de notre header'),
-            SlugField::new('slug')->setTargetFieldName('name'),
+            
             TextField::new('btnTitle','Titre de notre bouton'),
             TextField::new('btnUrl','Url de destination de notre bouton'),
             ImageField::new('illustration')
