@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Header;
+use Doctrine\ORM\EntityManagerInterface;
 use App\Controller\Admin\HeaderCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -15,6 +16,12 @@ class HeaderCrudController extends AbstractCrudController
     {
         return Header::class;
     }
+    private $entityManager;
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+
+    }
 
     
     public function configureFields(string $pageName): iterable
@@ -25,8 +32,8 @@ class HeaderCrudController extends AbstractCrudController
             TextField::new('btnTitle','Titre de notre bouton'),
             TextField::new('btnUrl','Url de destination de notre bouton'),
             ImageField::new('illustration')
-            ->setBasePath('uploads')
-            ->setUploadDir('./public/uploads')
+            ->setBasePath('uploads/')
+            ->setUploadDir('uploads/')
 
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setRequired(false),
