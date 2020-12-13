@@ -45,6 +45,7 @@ class ProductCrudController extends AbstractCrudController
             
 
         ];
+        $this->entityManager->flush();
     }
     
 }

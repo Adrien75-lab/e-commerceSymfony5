@@ -32,6 +32,7 @@ class HeaderCrudController extends AbstractCrudController
             ->setRequired(false),
 
         ];
+        $this->entityManager->flush();
     }
     
 }
