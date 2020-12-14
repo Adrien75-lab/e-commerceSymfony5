@@ -16,12 +16,7 @@ class HeaderCrudController extends AbstractCrudController
     {
         return Header::class;
     }
-    private $entityManager;
-    public function __construct(EntityManagerInterface $entityManager)
-    {
-        $this->entityManager = $entityManager;
-
-    }
+    
 
     
     public function configureFields(string $pageName): iterable
@@ -41,8 +36,7 @@ class HeaderCrudController extends AbstractCrudController
             
 
         ];
-        $this->entityManager->persist();
-        $this->entityManager->flush();
+        
         
     }
     
