@@ -107,4 +107,3 @@ class Header
         return $this;
     }
 }
-

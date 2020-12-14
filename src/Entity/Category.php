@@ -28,14 +28,13 @@ class Category
      * @ORM\OneToMany(targetEntity=Product::class, mappedBy="category")
      */
     private $products;
-
+    
     public function __construct()
     {
         $this->products = new ArrayCollection();
     }
-
     public function __toString() {
-        return $this->getName();
+        return $this->name;
     }
 
     public function getId(): ?int
@@ -75,8 +74,7 @@ class Category
 
     public function removeProduct(Product $product): self
     {
-        if ($this->products->contains($product)) {
-            $this->products->removeElement($product);
+        if ($this->products->removeElement($product)) {
             // set the owning side to null (unless already changed)
             if ($product->getCategory() === $this) {
                 $product->setCategory(null);
@@ -86,4 +84,3 @@ class Category
         return $this;
     }
 }
-
