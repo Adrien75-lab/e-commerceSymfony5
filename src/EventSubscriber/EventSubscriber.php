@@ -3,10 +3,11 @@
 namespace App\EventSubscriber;
 
 use App\Entity\Header;
-use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityPersistedEvent;
-use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityUpdatedEvent;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use App\EventSubscriber\EventSubscriber;
 use Symfony\Component\HttpKernel\KernelInterface;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityUpdatedEvent;
+use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityPersistedEvent;
 
 class EasyAdminSubscriber implements EventSubscriberInterface
 {
