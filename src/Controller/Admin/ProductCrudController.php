@@ -35,7 +35,7 @@ class ProductCrudController extends AbstractCrudController
             ->setBasePath('uploads')
             ->setUploadDir('public/uploads')
 
-            ->setUploadedFileNamePattern('[randomhash].[extension]')
+            
             ->setRequired(false),
             TextField::new('subtitle'),
             TextareaField::new('description'),
@@ -45,7 +45,7 @@ class ProductCrudController extends AbstractCrudController
             
 
         ];
-        $this->entityManager->flush();
+        
     }
     
 }
