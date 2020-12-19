@@ -33,10 +33,9 @@ class ProductCrudController extends AbstractCrudController
             SlugField::new('slug')->setTargetFieldName('name'),
             ImageField::new('illustration')
             ->setBasePath('uploads/')
-            ->setUploadDir('public/uploads')
-
-            ->setUploadedFileNamePattern('[randomhash].[extension]')
-            ->setRequired(false),
+                ->setUploadDir('public/uploads')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false),
             TextField::new('subtitle'),
             TextareaField::new('description'),
             BooleanField::new('isBest'),
@@ -45,7 +44,7 @@ class ProductCrudController extends AbstractCrudController
             
 
         ];
-        $this->entityManager->flush();
+        
     }
     
 }
