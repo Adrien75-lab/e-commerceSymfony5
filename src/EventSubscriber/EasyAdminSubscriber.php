@@ -4,6 +4,7 @@ namespace App\EventSubscriber;
 
 use App\Entity\Header;
 use App\EventSubscriber\EventSubscriber;
+use App\EventSubscriber\EasyAdminSubscriber;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityUpdatedEvent;
