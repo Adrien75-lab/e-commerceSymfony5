@@ -31,18 +31,18 @@ Retrouvez l'ensemble des produits que vous avez ajouté à votre panier
       <small>{{ product.product.subtitle }}</small>
       </td>
       <td><a href="{{ path('decrease_to_cart', {'id' : product.product.id})}}">
-      <img src=" {{ asset('assets/img/unless.svg') }}" height="12px" alt="Retirer un produit">
+      <img src=" {{ asset('build/images/unless.svg') }}" height="12px" alt="Retirer un produit">
         </a>
         x {{ product.quantity }}
         <a href="{{ path('add_to_cart', {'id' : product.product.id})}}">
-      <img src=" {{ asset('assets/img/more.svg') }}" height="12px" alt="Supprimer mon produit">
+      <img src=" {{ asset('build/images/more.svg') }}" height="12px" alt="Supprimer mon produit">
       </a>
       </td>
       <td>{{ (product.product.prix / 100)|number_format(2, ',', '.') }}€</td>
       <td>{{ ((product.product.prix * product.quantity  ) / 100)|number_format(2, ',', '.') }}€</td>
       <td>
       <a href="{{ path('delete_to_cart', {'id' : product.product.id})}}">
-      <img src=" {{ asset('assets/img/trash.svg') }}" height="15px" alt="Supprimer mon produit">
+      <img src=" {{ asset('build/images/trash.svg') }}" height="15px" alt="Supprimer mon produit">
       </a>
       </td>
       </tr>
