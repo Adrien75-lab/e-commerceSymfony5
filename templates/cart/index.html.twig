@@ -35,7 +35,7 @@ Retrouvez l'ensemble des produits que vous avez ajouté à votre panier
         </a>
         x {{ product.quantity }}
         <a href="{{ path('add_to_cart', {'id' : product.product.id})}}">
-      <img src=" {{ asset('build/images/more.svg') }}" height="12px" alt="Supprimer mon produit">
+      <img src=" {{ asset('build/images/more.pngS') }}" height="12px" alt="Supprimer mon produit">
       </a>
       </td>
       <td>{{ (product.product.prix / 100)|number_format(2, ',', '.') }}€</td>
