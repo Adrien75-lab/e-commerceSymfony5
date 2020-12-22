@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cddd5d16b1c5c096d93947c7c8615fbb",
+    "content-hash": "5a604d01b1bb754c1ba3f2e2394f13ad",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1525,16 +1525,16 @@
         },
         {
             "name": "mailjet/mailjet-apiv3-php",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailjet/mailjet-apiv3-php.git",
-                "reference": "ad940462b59e0fc06f6fbe2d9e7a40679f604f95"
+                "reference": "7b94fa629d46fa5ba3826ed4596674942944520d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailjet/mailjet-apiv3-php/zipball/ad940462b59e0fc06f6fbe2d9e7a40679f604f95",
-                "reference": "ad940462b59e0fc06f6fbe2d9e7a40679f604f95",
+                "url": "https://api.github.com/repos/mailjet/mailjet-apiv3-php/zipball/7b94fa629d46fa5ba3826ed4596674942944520d",
+                "reference": "7b94fa629d46fa5ba3826ed4596674942944520d",
                 "shasum": ""
             },
             "require": {
@@ -1571,7 +1571,7 @@
                 "php",
                 "v3"
             ],
-            "time": "2020-09-11T07:01:58+00:00"
+            "time": "2020-12-21T16:30:15+00:00"
         },
         {
             "name": "monolog/monolog",
