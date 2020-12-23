@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\HeaderRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @ORM\Entity(repositoryClass=HeaderRepository::class)
